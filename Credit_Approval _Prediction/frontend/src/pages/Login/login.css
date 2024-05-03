@@ -1,0 +1,95 @@
+/* login.css */
+body{
+  overflow: hidden;
+}
+.login-main {
+  height: 100vh;
+}
+
+.login-left,
+.login-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Adjust the height as needed */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.login-card {
+  /* Add any styles you want for the card */
+}
+
+.login-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.login-form {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.checkbox {
+  margin-bottom: 15px;
+}
+
+.checkbox label {
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button[type="button"] {
+  background-color: transparent;
+  color: #007bff;
+}
+
+button[type="button"]:hover {
+  color: #0056b3;
+}
