@@ -1,25 +1,94 @@
-.sidebar {
-    height: 100vh; /* Full height */
-    position: fixed; /* Fixed sidebar */
-    top: 0;
-    left: 0;
-    width: 200px; /* Set the width of the sidebar */
-    background-color: #f8f9fa; /* Light background color */
-    padding-top: 20px; /* Padding at the top */
-    border-right: 1px solid #dee2e6; /* Right border */
-    overflow-y: auto; /* Allow vertical scrolling */
+/* navbar.css */
+
+.custom-navbar {
+  padding: 10px; /* Adjust padding as needed */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center content horizontally */
+  background-color:  rgb(177, 206, 235); /* Change background color */
+}
+.logo-image{
+  left: 20px;
+  margin-left: 80px;
+  margin-top: 18px;
 }
 
-.sidebar .nav-link {
-    color: #000; /* Default link color */
-    transition: color 0.3s ease; /* Smooth color transition */
+.navheight {
+  height: 60px; /* Adjust height as needed */
+  
 }
 
-.sidebar .nav-link:hover {
-    color: #007bff; /* Hover color */
+.custom-search-form {
+  position: relative; /* Ensure relative positioning */
+  width: 450px; /* Adjust search input width */
+  border-radius: 0.3cm; /* Rounded corners for the search input */
+  right: 50px;
+  
+}
+.search-bar{
+  background-color:  rgb(177, 206, 235);
+  color: white;
+  
+  border-color:antiquewhite;
+  
+}
+.search-bar:focus{
+  border: solid #0f5e67;
+  
 }
 
-.sidebar .nav-link.active {
-    font-weight: bold; /* Bold font for active link */
-    color: #007bff; /* Active link color */
+
+.loginbutton-icon{
+  margin-right: 20px;
 }
+
+.form-control.pl-4 {
+  padding-left: 2.5rem !important; /* Adjust left padding to accommodate the button */
+  padding-right: 2.5rem !important; /* Adjust right padding for text */
+}
+
+.form-control.pr-5 {
+  padding-right: 2.5rem !important; /* Adjust right padding to accommodate the button */
+}
+
+.search-button {
+  width: 2.5rem; /* Adjust button width */
+  height: 100%; /* Ensure button covers the height of the input */
+  position: absolute; /* Position the button */
+  right: 0; /* Align button to the right */
+  top: 0;
+  
+}
+.search-button:hover{
+  color: #0f5e67; /* Hover color */
+}
+
+.nav-link {
+  color: #08416d; /* Link color */
+}
+
+.nav-link:hover {
+  color: #0f5e67; /* Hover color */
+}
+
+/* Styles for profile button */
+.profile-link {
+  color:#0f5e67;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Styles for settings button */
+.settings-link {
+  color: #0f5e67;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Styles for logout button */
+.logout-link {
+  color: #0f5e67;
+  font-size: 18px;
+}
+
+
+

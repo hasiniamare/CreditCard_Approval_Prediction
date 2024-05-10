@@ -1,0 +1,25 @@
+.sidebar {
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed sidebar */
+    top: 0;
+    left: 0;
+    width: 200px; /* Set the width of the sidebar */
+    background-color: #f8f9fa; /* Light background color */
+    padding-top: 20px; /* Padding at the top */
+    border-right: 1px solid #dee2e6; /* Right border */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.sidebar .nav-link {
+    color: #000; /* Default link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.sidebar .nav-link:hover {
+    color: #007bff; /* Hover color */
+}
+
+.sidebar .nav-link.active {
+    font-weight: bold; /* Bold font for active link */
+    color: #007bff; /* Active link color */
+}

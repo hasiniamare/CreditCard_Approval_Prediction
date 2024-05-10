@@ -1,0 +1,154 @@
+/* application.css */
+
+/* Set minimum width for the dropdown toggle button */
+#dropdown-time,
+#dropdown-filter {
+  max-width: 100px;
+  margin-top: 10px;
+}
+
+/* Set minimum width for the dropdown menu */
+#dropdown-time + .dropdown-menu,
+#dropdown-filter + .dropdown-menu {
+  max-width: 100px;
+}
+.horizontal-vertical-scroll {
+  max-height: 500px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Enable vertical scroll */
+}
+
+.tabel-card{
+  left:40px;
+  top:100px;
+  position: absolute; /* Add this line for absolute positioning */
+
+}
+
+.application-tabel{
+  top:auto
+}
+
+#customerhistory-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 250px;
+  margin-bottom: 20px;
+  position: relative; /* Add this line for relative positioning */
+ 
+  
+}
+#customerhistory {
+  min-width: 400px;
+  width: calc(60% - 20px); /* Adjust based on your design */
+}
+
+
+#customerhistory .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+ 
+  
+  
+}
+
+.search-bar-tabel{
+  position: absolute;
+  
+}
+.length-search{
+  width: 450px;
+}
+
+#filter {
+  width: 100px;
+  left: 500px;
+  top: 0px; /* Adjust the top position as needed */
+  position: absolute;
+  
+}
+#pdf-download{
+ 
+  border:none;
+  width: 300px;
+  left: 680px;
+  background-color:#007bff00;
+  position: absolute;
+  top:10px
+ 
+
+}
+
+
+#customerhistory .card-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  
+}
+#customerhistory .form-control {
+  width: 100%;
+}
+/* application.css */
+
+
+#customerhistory .table-container {
+  max-height: 400px; /* Adjust the maximum height as needed */
+  overflow-y: auto;
+
+}
+
+#customerhistory .table th {
+  background-color: #3981ca;
+  text-align: center;
+  line-height:0.9; /* Adjust the line height as needed */
+  z-index: 1; /* Ensure the headers appear above the scrollable area */
+  position: sticky;
+  top: 0;
+}
+
+/* Set width for specific columns */
+.application-tabel th:nth-child(1),
+.application-tabel td:nth-child(1) {
+  width: 10px; /* Adjust the width as needed for the first column */
+}
+
+.application-tabel th:nth-child(2),
+.application-tabel td:nth-child(2) {
+  width: 200px; /* Adjust the width as needed for the second column */
+}
+
+/* Add more nth-child selectors for other columns as needed */
+
+
+#customerhistory .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* CSS for Customer Details Card */
+.customer-details-card {
+  max-width: 500px; /* Increase the max-width as needed */
+  width: 500px; /* Set a specific width if needed */
+  max-height: 800px; /* Increase the max-height as needed */
+  overflow-y: auto; /* Enable vertical scroll if content exceeds max-height */
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 10px;
+  top: 170px;
+}
+
+
+.customer-details-card .card-header {
+  background-color: #3981ca;
+  color: #fff;
+  text-align: center;
+}
+
+.customer-details-card .card-body {
+  padding: 10px;
+}
+
+.customer-details-card .card-body p {
+  margin-bottom: 5px;
+}
+

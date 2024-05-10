@@ -1,24 +1,47 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
-import './SignOut.css';
+import { Button, Modal } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import './signout.css';
 
-const SignOut = () => {
-  const history = useHistory();
-
-  const handleSignOut = () => {
-    // Perform sign-out logic here
-    // For example, clear local storage, update state, etc.
-    localStorage.removeItem('token'); // Assuming you store a token for authentication
-
-    // Redirect to the login page or any other desired route after sign-out
-    history.push('/login');
-  };
-
+const SignOutModal = ({ show, onHide, onSignOut }) => {
   return (
-    <button className="sign-out-btn" onClick={handleSignOut}>
-      Sign Out
-    </button>
+    <Modal show={show} onHide={onHide} centered>
+      <Modal.Header closeButton>
+        <Modal.Title>Sign Out</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>Are you sure you want to sign out?</Modal.Body>
+      <Modal.Footer>
+        <Button variant="secondary" onClick={onHide}>Cancel</Button>
+        <Button variant="primary" onClick={onSignOut}>Sign Out</Button>
+      </Modal.Footer>
+    </Modal>
   );
 };
 
-export default SignOut;
+const SignOutButton = () => {
+  const [showModal, setShowModal] = React.useState(false);
+  const history = useNavigate();
+
+  const handleSignOut = () => {
+    try {
+      console.log('Signing out...');
+      localStorage.clear();
+      history('/login');
+    } catch (error) {
+      console.error('Signout failed:', error);
+    }
+  };
+
+  return (
+    <>
+      <Button variant="danger" className='signout' onClick={() => setShowModal(true)}>Sign Out</Button>
+      <SignOutModal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        onSignOut={handleSignOut}
+      />
+    </>
+  );
+};
+
+export default SignOutButton;

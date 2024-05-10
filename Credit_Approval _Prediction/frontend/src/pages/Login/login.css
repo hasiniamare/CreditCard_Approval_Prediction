@@ -1,95 +1,46 @@
-/* login.css */
-body{
-  overflow: hidden;
+/* newLog.css */
+body {
+  background-image: url('../../images/background.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+  background-position: center center;
+  opacity: 0.9; /* Adjust the opacity as needed (0.1 to 1) */
+  
 }
+
 .login-main {
   height: 100vh;
 }
 
-.login-left,
-.login-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-container {
-  width: 100%; /* Adjust the width as needed */
-  height: auto; /* Adjust the height as needed */
+.login-card {
+  height: 450px;
+  width: 700px;
+  left: 370px;
+  top: 180px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 255, 0);
+  border: none;
+  
+  
 }
 
 .image {
-  width: 100%;
-  height: auto;
-}
-
-.login-card {
-  /* Add any styles you want for the card */
-}
-
-.login-container {
-  display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  width: 365px;
+  height: 450px;
+  object-fit: cover;
+  opacity: 0.8;
 }
 
 .login-form {
-  max-width: 400px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  font-weight: bold;
+  padding: 30px;
+  padding-top: 80px;
+  width: 340px;
+  height: 450px;
+  
+  
 }
 
 .form-control {
   width: 100%;
-  padding: 8px;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-}
-
-.checkbox {
-  margin-bottom: 15px;
-}
-
-.checkbox label {
-  cursor: pointer;
-}
-
-h2 {
-  text-align: center; /* Center the heading */
-  margin-bottom: 20px; /* Add some space below the heading */
-}
-
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 3px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-button[type="button"] {
-  background-color: transparent;
-  color: #007bff;
-}
-
-button[type="button"]:hover {
-  color: #0056b3;
 }

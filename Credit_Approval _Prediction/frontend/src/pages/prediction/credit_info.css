@@ -1,0 +1,46 @@
+.form-card {
+  background-color: rgb(19, 55, 84);
+  width: 470px; /* Adjust the width as needed */
+  height: 200%; /* Adjust the height as needed */
+  padding: 50px;
+  bottom: 65px;
+  border-radius: 10px;
+  right: 15px; /* Center the form card horizontally */
+  margin-top: 35px;
+}
+
+.prediction-title {
+  color: #ffffff;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #c2c2c2;
+}
+
+.prediction-from {
+  margin-top: 50px;
+}
+
+.prediction-button {
+  color: rgb(19, 55, 84);
+  background-color: rgb(255, 255, 255);
+  width: 150px;
+  margin-top: 20px;
+  margin-left: 120px;
+  font-family:Arial, Helvetica, sans-serif;
+  
+}
+
+.prediction-button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(23, 68, 105);
+  width: 150px;
+  margin-top: 20px;
+}
