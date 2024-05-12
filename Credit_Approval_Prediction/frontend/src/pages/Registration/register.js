@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './register.css';
 import Sidebar from '../../Components/sidebar';
-
+import { Card } from 'react-bootstrap';
 const UserProfileCreation = () => {
   const [name, setName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
@@ -71,8 +71,9 @@ const UserProfileCreation = () => {
 
   return (
     <>
-    <Sidebar />
-    <div className="container mt-3 reg-from-container">
+    
+    <Card className='reg-from-container'>
+    <div className="container mt-3 form-class ">
       <div className="row">
         <div className="col-md-3 border-right">
           <div className="text-center">
@@ -91,7 +92,7 @@ const UserProfileCreation = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-5">
+        <div className="col-md-5 input-holders">
           <form onSubmit={handleSubmit}>
             <h4 className="mb-4 title-profile">User Profile Creation</h4>
             <div className="mb-3">
@@ -169,6 +170,8 @@ const UserProfileCreation = () => {
         </div>
       )}
     </div>
+    </Card>
+    <Sidebar />
     </>
   );
 }

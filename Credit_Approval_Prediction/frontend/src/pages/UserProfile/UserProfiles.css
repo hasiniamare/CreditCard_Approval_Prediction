@@ -5,15 +5,24 @@
 }
 
 .edit-model{
-    background-color: rgb(9, 70, 54);
+    background-color: rgb(17, 132, 225);
     color: black;
     
 }
 .btn-width{
     width: 90px;
     margin: 2px;
+    background-color: rgb(17, 132, 225);;
+    border: none;
 }
 
 .users-profile{
     margin-left: 200px;
+}
+.btn-delete-width{
+    width: 90px;
+    margin: 2px;
+}
+table{
+    background-color: rgb(28, 88, 207);
 }

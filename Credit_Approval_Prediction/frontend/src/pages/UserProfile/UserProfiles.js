@@ -4,6 +4,7 @@ import { Button, Modal, Form } from 'react-bootstrap';
 import './UserProfiles.css';
 //import WecomeBackground from '../images/LabBackground.jpeg'
 import Sidebar from '../../Components/sidebar';
+import axios from 'axios';
 
 const UserProfile = () => {
   const [users, setUsers] = useState([]);
@@ -59,7 +60,12 @@ const UserProfile = () => {
   };
 
   const handleDelete = async (user) => {
-    // Implement delete functionality
+    try {
+      await axios.delete(`http://localhost:4000/user-profiles/${user.username}`);
+      await fetchUserProfiles();
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
   };
 
  
@@ -74,7 +80,7 @@ const UserProfile = () => {
       <div className="table-responsive">
         <table className="table">
           <thead>
-            <tr>
+            <tr className='t-head'>
               <th>Name</th>
               <th>Email</th>
               <th>Mobile Number</th>
@@ -96,8 +102,8 @@ const UserProfile = () => {
                 <td>{user.username}</td>
                 <td className="d-none d-sm-table-cell">{user.password}</td>
                 <td>
-                  <Button variant="success btn-width" onClick={() => handleUpdate(user)}>Update</Button>{' '}
-                  <Button variant="danger btn-width" onClick={() => handleDelete(user)}>Delete</Button>
+                  <Button variant="secondary btn-width" onClick={() => handleUpdate(user)}>Update</Button>{' '}
+                  <Button variant="danger btn-delete-width " onClick={() => handleDelete(user)}>Delete</Button>
                 </td>
               </tr>
             ))}
@@ -146,7 +152,7 @@ const UserProfile = () => {
     </Form>
   </Modal.Body>
   <Modal.Footer>
-    <Button variant="danger" onClick={handleClose}>
+    <Button variant="secondary" onClick={handleClose}>
       Cancel
     </Button>
     <Button variant="success" onClick={handleSave}>

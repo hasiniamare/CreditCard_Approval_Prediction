@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-//import './Profile.css';
+import './profile.css';
 import axios from 'axios';
 //import WecomeBackground from '../images/LabBackground.jpeg'
 import Sidebar from '../../Components/sidebar';

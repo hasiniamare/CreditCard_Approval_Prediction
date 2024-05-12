@@ -37,7 +37,7 @@ const Applicant = () => {
   const handleApprove = async (customer) => {
     try {
       const updatedCustomers = customers.map((c) =>
-        c.nic === customer.nic ? { ...c, ApplicationStatus: 'Approved' } : c
+        c.nic === customer.nic ? { ...c, ApplicationStatus: 'Approved', canSendEmail: true } : c
       );
       setCustomers(updatedCustomers);
       await axios.put(`http://127.0.0.1:4000/approve-application/${customer.nic}`, {
@@ -48,6 +48,28 @@ const Applicant = () => {
       console.error('Error approving customer:', error);
     }
   };
+
+  const handleSendEmail = async (customer) => {
+    try {
+      // Assuming you have an email sending API or service
+      const response = await axios.post('http://eliscannon6@gmail.com/send-email', {
+        to: selectedCustomer.Email,
+        subject: 'Your Application Status',
+        message: 'Your application has been approved. Congratulations!',
+      });
+      console.log('Email sent:', response.data);
+  
+      // Update the customer state to indicate that the email has been sent
+      const updatedCustomers = customers.map((c) =>
+        c.nic === customer.nic ? { ...c, canSendEmail: false } : c
+      );
+      setCustomers(updatedCustomers);
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  };
+  
+  
   
   const handleReject = async (customer) => {
     try {
@@ -74,7 +96,6 @@ const Applicant = () => {
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
-
   const handleDelete = async () => {
     try {
       if (!selectedCustomer) {
@@ -294,7 +315,16 @@ const Applicant = () => {
                     {customer.ApplicationStatus === 'Approved' ? 'Approved' :
                      customer.ApplicationStatus === 'Rejected' ? 'Rejected' : 'Pending'}
                   </td>
-                  <td><Button variant='danger' onClick={handleDelete}>Delete</Button></td>
+                  <td>
+                  
+                  <Button variant='danger' onClick={handleDelete}>Delete</Button>
+                  
+                  {customer.ApplicationStatus === 'Approved' && customer.canSendEmail ? (
+    <Button variant="info" onClick={() => handleSendEmail(customer)}>Send Email</Button>
+  ) : null}
+                  
+                  </td>
+
                 </tr>
               ))}
               

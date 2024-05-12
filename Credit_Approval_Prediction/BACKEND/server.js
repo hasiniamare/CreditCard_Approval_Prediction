@@ -206,6 +206,73 @@ app.post('/register', upload.single('profilePic'), async (req, res) => {
       res.status(500).json({ message: 'Registration failed' });
   }
 });
+// Add a route to fetch all user profiles
+app.get('/user-profiles', async (req, res) => {
+  try {
+      // Retrieve all user profiles from Firestore
+      const assistantsSnapshot = await db.collection('Assistants').get();
+      const managersSnapshot = await db.collection('admin').get();
+
+      // Combine user profiles from both collections
+      const assistants = assistantsSnapshot.docs.map(doc => doc.data());
+      const managers = managersSnapshot.docs.map(doc => doc.data());
+      const userProfiles = [...assistants, ...managers];
+
+      res.status(200).json(userProfiles);
+  } catch (error) {
+      console.error('Error fetching user profiles:', error);
+      res.status(500).json({ message: 'Failed to fetch user profiles' });
+  }
+});
+// Update user profile route
+app.put('/user-profiles/:username', async (req, res) => {
+  try {
+    const { username } = req.params;
+    const updatedUserData = req.body;
+
+    // Update user profile in Firestore
+    const collectionName = updatedUserData.userRole === 'assistant' ? 'Assistants' : 'admin';
+    await db.collection(collectionName).doc(username).set(updatedUserData);
+
+    res.status(200).json({ message: 'User updated successfully' });
+  } catch (error) {
+    console.error('Error updating user:', error);
+    res.status(500).json({ message: 'Failed to update user' });
+  }
+});
+
+
+// Delete user profile route
+app.delete('/user-profiles/:username', async (req, res) => {
+  try {
+    const { username } = req.params;
+
+    // Delete user profile from Firestore
+    await db.collection('Assistants').doc(username).delete();
+    await db.collection('admin').doc(username).delete();
+
+    res.status(200).json({ message: 'User deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    res.status(500).json({ message: 'Failed to delete user' });
+  }
+});
+
+// Delete user profile route
+app.delete('/user-profiles/:username', async (req, res) => {
+  try {
+    const { username } = req.params;
+
+    // Delete user profile from Firestore
+    await db.collection('Assistants').doc(username).delete();
+    await db.collection('admin').doc(username).delete();
+
+    res.status(200).json({ message: 'User deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    res.status(500).json({ message: 'Failed to delete user' });
+  }
+});
 
 app.get('/register/:username', async (req, res) => {
   const { username } = req.params;
@@ -487,6 +554,38 @@ app.delete('/delete-customer/:nic', async (req, res) => {
     res.status(500).json({ message: 'Failed to delete customer data' });
   }
 });
+// POST endpoint for sending emails
+app.post('/send-email', async (req, res) => {
+  try {
+    const { to, subject, message } = req.body;
+
+    // Create a Nodemailer transporter using SMTP or your email service provider's details
+    const transporter = nodemailer.createTransport({
+      service: 'Gmail', // Use your email service provider
+      auth: {
+        user: 'eliscannon6@gmail.com', // Your email address
+        pass: '1@2@3@4567890', // Your email password or an app-specific password
+      },
+    });
+
+    // Define email options
+    const mailOptions = {
+      from: 'eliscannon6@gmail.com>',
+      to,
+      subject,
+      text: message,
+    };
+
+    // Send email
+    await transporter.sendMail(mailOptions);
+
+    res.status(200).json({ message: 'Email sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ message: 'Failed to send email' });
+  }
+});
+
 
 
 

@@ -1,88 +1,20 @@
-/* register.css */
+.reg-from-container{
+     
+background-color: rgba(0, 0, 0, 0);
 
-.reg-from-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  .title-profile {
-    color: #333;
-  }
-  
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-  }
-  
-  .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    color: #fff;
-  }
-  
-  .btn-danger:hover {
-    background-color: #c82333;
-    border-color: #bd2130;
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: none;
-  }
-  
-  .modal-dialog {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .modal-content {
-    width: 80%;
-    max-width: 350px; /* Adjusted width */
-    margin-left: 5px; /* Align to the right side */
-    background-color: #fff;
-    border-radius: 5px;
+border: none;
+top:100px;
+left: 250px;
+padding-right: 300px;
+margin-left: -200px;
 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .modal-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 15px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  
-  .modal-body {
-    padding: 15px;
-  }
-  
-  .btn-close {
-    color: #fff;
-    border: none;
-    background: transparent;
-    font-size: 1.25rem;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-  }
+
+
+}
+.form-class{
+    padding-left: 100px;
+    width: 750px;
+    height: 750px;
+    padding-bottom: 250px;
+    
+}
