@@ -1,0 +1,83 @@
+/* Navbar CSS */
+
+.navbar {
+  background-color: rgb(177, 206, 235); 
+  height: 60px;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-brand:hover {
+  color:white;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+.navbar-nav .nav-item .dropdown-toggle {
+  color: rgb(2, 21, 76);
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  background-color: rgb(177, 206, 235);
+  border: none;
+}
+
+.navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  color: rgb(2, 21, 76);
+  
+}
+
+.navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Modal CSS */
+.modal-content {
+  background-color: rgb(255, 255, 255);
+  color: rgb(31, 94, 58);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.modal-footer button {
+  color: white;
+}
+
+.text-nav-center{
+  color: aliceblue;
+}
+
+.navbar-text{
+  color: white;
+  margin-left: 50px;
+}
+.logo-img{
+  left: 20px;
+  margin-left: 20px;
+  margin-top: 18px;
+  width: 100px;
+  height: 85px;
+}
+
+.sign-icon{
+  margin-right: 80px;
+}
+
+
+
+
+

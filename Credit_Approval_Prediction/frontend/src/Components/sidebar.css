@@ -1,0 +1,30 @@
+.sidebar {
+    height: 40vh; /* Full height */
+    position: fixed; /* Fixed sidebar */
+    top: 0;
+    left: 8px;
+    width: 190px; /* Set the width of the sidebar */
+    background:none;  /* Light background color */
+    padding-top: 20px; /* Padding at the top */
+   
+    overflow-y: auto; /* Allow vertical scrolling */
+    margin-top: 190px;
+    
+}
+
+
+.sidebar .nav-link {
+    color: rgb(2, 21, 76); /* Default link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+    padding: 15px;
+    text-align: left;
+}
+
+.sidebar .nav-link:hover {
+    color: white; /* Hover color */
+}
+
+.sidebar .nav-link.active {
+    font-weight: bold; /* Bold font for active link */
+    color: rgba(220, 226, 232, 0.834); /* Active link color */
+}

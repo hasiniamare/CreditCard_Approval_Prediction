@@ -1,0 +1,123 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.setting-title {
+  font-size: large;
+  color: #fff;
+  padding-left: 40px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+  margin-top: 70px;
+  padding-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  margin-top: 30px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: rgb(34, 57, 55);
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: rgb(40, 68, 65);
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#sidebar .nav a {
+  background: none;
+  color: #b0bec5; /* Default gray color for tabs */
+  font-size: 20px;
+  padding: 16px 24px;
+  line-height: 80px;
+  text-decoration: none;
+}
+
+#sidebar .nav a.active {
+  color: #fff; /* Active tab in white color */
+}
+
+#sidebar .nav a:hover {
+  background: none;
+  color: #fff;
+}
+
+#sidebar .nav a i {
+  margin-right: 16px;
+}
+
+/* Logout Tab */
+#sidebar .logout-tab {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+#sidebar .logout-tab a {
+  background: none;
+  color: #ffffff;
+  font-size: 23px;
+  line-height: normal;
+  text-decoration: none;
+}
+
+#sidebar .logout-tab a:hover {
+  background: none;
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  #sidebar {
+    left: -250px; /* Hide sidebar by default */
+  }
+
+  #sidebar.active {
+    left: 0; /* Show sidebar when active */
+  }
+
+  #viewport {
+    padding-left: 0; /* Adjust content padding */
+  }
+}
+
+#sidebarCollapse {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}

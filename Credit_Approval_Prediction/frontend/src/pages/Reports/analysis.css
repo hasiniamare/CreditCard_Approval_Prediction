@@ -1,0 +1,26 @@
+.countapproved{
+    height: 55vh;
+    margin-top: 190px;
+    margin-left: 450px;
+    background-color: rgb(255,255, 255,0.1);
+    width: 800px;
+    
+}
+
+.count-text{
+    color: whitesmoke;
+    text-align: center;
+   
+}
+
+/* analysis.css */
+
+#pieChart {
+    margin-top: 20px;
+    width: 380px; /* Adjust width as needed */
+    height: 350px; /* Adjust height as needed */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+

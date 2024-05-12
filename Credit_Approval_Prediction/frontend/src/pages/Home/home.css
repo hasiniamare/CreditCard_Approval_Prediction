@@ -1,0 +1,80 @@
+/* home.css */
+
+.custom-modal .modal-content {
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove box shadow */
+}
+.custom-modal .modal-dialog {
+    margin: 0 auto; /* Center the modal */
+    width: 90%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width */
+}
+
+.home-bg {
+    background-size: cover;
+    
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative; /* Ensure proper stacking order */
+    height: 90%; /* Set a fixed height to cover the viewport */
+}
+
+.container {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+
+  
+
+.custom-h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e1e2e5;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.custom-h2 {
+    font-size: 1.2rem;
+    color: #e1e2e5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left; /* Align to the right */
+}
+
+.custom-paragraph {
+    font-size: 1rem;
+    color: rgb(161, 160, 152);
+    font-family: cursive;
+    text-align: left; /* Align to the right */
+    justify-content: left;
+
+}
+
+.apply-btn {
+    background-color:white; /* Adjust the background color as needed */
+    color:rgb(2, 21, 76); /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.apply-btn:hover {
+    background-color: rgb(16, 127, 142); /* Hover color */
+    color: #ffffff;
+}
+.card-image {
+    position: absolute;
+    top: 134px;
+    left: 670px;
+    margin-left: 4px; /* Adjust margin-left as needed */
+    z-index: 1000; /* Ensure it's above other elements */
+    width: 800px;
+    
+    
+}
+
